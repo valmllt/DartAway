@@ -1,11 +1,13 @@
 import WeatherWidget from './WeatherWidget'
 import ManagerMessage from './ManagerMessage'
 import { getManagerMessage } from '../data/managerTemplates'
+import { getCriminal } from '../data/criminals'
 
 export default function DestinationModal({ country, onClose }) {
   if (!country) return null
 
   const message = getManagerMessage(country)
+  const criminal = getCriminal(country)
 
   return (
     <div
@@ -79,6 +81,26 @@ export default function DestinationModal({ country, onClose }) {
         <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)' }} />
 
         <WeatherWidget capital={country.capital} />
+
+        <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)' }} />
+
+        {/* Criminel le plus connu */}
+        <div style={{ width: '100%', background: 'rgba(220,38,38,0.08)', border: '1px solid rgba(220,38,38,0.25)', borderRadius: '12px', padding: '16px 20px' }}>
+          <div style={{ fontSize: '11px', fontWeight: '700', letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(248,113,113,0.8)', marginBottom: '8px' }}>
+            ☠️ Criminel le plus (co)nnu
+          </div>
+          <div style={{ fontSize: '16px', fontWeight: '700', color: '#fca5a5', marginBottom: '4px' }}>
+            {criminal.name}
+          </div>
+          <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.65)', lineHeight: '1.5' }}>
+            {criminal.crime}
+          </div>
+          {criminal.years !== '—' && (
+            <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.35)', marginTop: '6px' }}>
+              {criminal.years}
+            </div>
+          )}
+        </div>
 
         <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)' }} />
 
