@@ -10,5 +10,9 @@ html, body, #root {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #0f0f1a;
+  background: #03000f;
 }
+
+/* Cyberpunk cursor */
+* { cursor: crosshair; }
+button { cursor: pointer !important; }
