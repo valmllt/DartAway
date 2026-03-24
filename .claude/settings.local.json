@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(brew install:*)",
+      "Bash(git -C /Users/maillet_v/Desktop/DartAway init)",
+      "Bash(git -C /Users/maillet_v/Desktop/DartAway add .gitignore)",
+      "Bash(gh auth:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh api:*)",
+      "Bash(git config:*)"
+    ]
+  }
+}
