@@ -1,13 +1,10 @@
 import WeatherWidget from './WeatherWidget'
-import Riddle from './FunFact'
 import ManagerMessage from './ManagerMessage'
-import { getRiddle } from '../data/riddles'
 import { getManagerMessage } from '../data/managerTemplates'
 
 export default function DestinationModal({ country, onClose }) {
   if (!country) return null
 
-  const riddle = getRiddle(country)
   const message = getManagerMessage(country)
 
   return (
@@ -85,7 +82,6 @@ export default function DestinationModal({ country, onClose }) {
 
         <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)' }} />
 
-        <Riddle text={riddle} />
         <ManagerMessage text={message} />
 
         <button
