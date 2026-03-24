@@ -110,6 +110,16 @@ const WorldMap = forwardRef(function WorldMap({ onLaunch }, ref) {
         </ComposableMap>
       </div>
 
+      {/* Titre */}
+      <div style={{ position: 'absolute', top: '32px', left: '50%', transform: 'translateX(-50%)', zIndex: 5, pointerEvents: 'none', textAlign: 'center' }}>
+        <h1 style={{ margin: 0, fontSize: '42px', fontWeight: '800', color: '#fff', letterSpacing: '-1px', textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
+          🎯 DartAway
+        </h1>
+        <p style={{ margin: '4px 0 0', fontSize: '14px', color: 'rgba(255,255,255,0.45)', letterSpacing: '0.5px' }}>
+          Lance la fusée. Découvre ta destination.
+        </p>
+      </div>
+
       {/* Bouton — en dehors du zoom */}
       <div style={{ position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)', zIndex: 10 }}>
         <button
